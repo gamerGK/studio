@@ -5,8 +5,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { CornerDownLeft, Loader2, Sparkles } from 'lucide-react';
-import JSONPretty from 'react-json-pretty';
-import monokai from 'react-json-pretty/themes/monikai.css';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,6 +12,7 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '@/component
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { handleQuestion } from '@/app/actions';
+import { FormattedAnswer } from './formatted-answer';
 
 const formSchema = z.object({
   question: z.string().min(10, 'Please ask a more detailed question.'),
@@ -55,15 +54,6 @@ export function AiAssistant() {
       setIsLoading(false);
     }
   }
-  
-  const isValidJson = (str: string) => {
-    try {
-      JSON.parse(str);
-    } catch (e) {
-      return false;
-    }
-    return true;
-  };
 
   return (
     <section id="ai-assistant" className="mb-12">
@@ -122,16 +112,13 @@ export function AiAssistant() {
               <Loader2 className="h-5 w-5 animate-spin" />
               <span>Thinking...</span>
             </div>
+
           )}
 
           {answer && (
             <div className="prose prose-sm mt-6 max-w-none rounded-lg border bg-background p-4">
               <h3 className="text-foreground">Answer:</h3>
-              {isValidJson(answer) ? (
-                 <JSONPretty data={JSON.parse(answer)} theme={monokai} />
-              ) : (
-                <p className="text-muted-foreground whitespace-pre-wrap">{answer}</p>
-              )}
+              <FormattedAnswer jsonString={answer} />
             </div>
           )}
         </CardContent>
