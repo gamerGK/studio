@@ -13,7 +13,6 @@ export function PageHeader() {
             alt={logo.description}
             width={80}
             height={80}
-            className="rounded-full"
             data-ai-hint={logo.imageHint}
           />
         )}
