@@ -5,6 +5,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { CornerDownLeft, Loader2, Sparkles } from 'lucide-react';
+import JSONPretty from 'react-json-pretty';
+import monokai from 'react-json-pretty/themes/monikai.css';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -16,20 +18,6 @@ import { handleQuestion } from '@/app/actions';
 const formSchema = z.object({
   question: z.string().min(10, 'Please ask a more detailed question.'),
 });
-
-function FormattedAnswer({ text }: { text: string }) {
-  const parts = text.split(/(\*\*.*?\*\*)/g);
-  return (
-    <p className="text-muted-foreground whitespace-pre-wrap">
-      {parts.map((part, index) => {
-        if (part.startsWith('**') && part.endsWith('**')) {
-          return <strong key={index}>{part.slice(2, -2)}</strong>;
-        }
-        return part;
-      })}
-    </p>
-  );
-}
 
 export function AiAssistant() {
   const [answer, setAnswer] = useState('');
@@ -67,6 +55,15 @@ export function AiAssistant() {
       setIsLoading(false);
     }
   }
+  
+  const isValidJson = (str: string) => {
+    try {
+      JSON.parse(str);
+    } catch (e) {
+      return false;
+    }
+    return true;
+  };
 
   return (
     <section id="ai-assistant" className="mb-12">
@@ -130,7 +127,11 @@ export function AiAssistant() {
           {answer && (
             <div className="prose prose-sm mt-6 max-w-none rounded-lg border bg-background p-4">
               <h3 className="text-foreground">Answer:</h3>
-              <FormattedAnswer text={answer} />
+              {isValidJson(answer) ? (
+                 <JSONPretty data={JSON.parse(answer)} theme={monokai} />
+              ) : (
+                <p className="text-muted-foreground whitespace-pre-wrap">{answer}</p>
+              )}
             </div>
           )}
         </CardContent>
