@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "iit-kgp-logo",
+      "description": "IIT Kharagpur Logo",
+      "imageUrl": "https://images.unsplash.com/photo-1728206313441-281ef4ea5d62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx1bml2ZXJzaXR5JTIwbG9nb3xlbnwwfHx8fDE3NjQxNzM1MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university logo"
+    },
+    {
+      "id": "creator-photo",
+      "description": "Creator's Photo",
+      "imageUrl": "https://images.unsplash.com/photo-1615572359976-1fe39507ed7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMG1hbnxlbnwwfHx8fDE3NjQyNDg4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait man"
+    }
+  ]
 }
