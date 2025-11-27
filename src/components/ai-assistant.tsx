@@ -17,6 +17,20 @@ const formSchema = z.object({
   question: z.string().min(10, 'Please ask a more detailed question.'),
 });
 
+function FormattedAnswer({ text }: { text: string }) {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return (
+    <p className="text-muted-foreground whitespace-pre-wrap">
+      {parts.map((part, index) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+          return <strong key={index}>{part.slice(2, -2)}</strong>;
+        }
+        return part;
+      })}
+    </p>
+  );
+}
+
 export function AiAssistant() {
   const [answer, setAnswer] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -116,7 +130,7 @@ export function AiAssistant() {
           {answer && (
             <div className="prose prose-sm mt-6 max-w-none rounded-lg border bg-background p-4">
               <h3 className="text-foreground">Answer:</h3>
-              <p className="text-muted-foreground whitespace-pre-wrap">{answer}</p>
+              <FormattedAnswer text={answer} />
             </div>
           )}
         </CardContent>
