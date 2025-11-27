@@ -116,7 +116,7 @@ export function AiAssistant() {
           {answer && (
             <div className="prose prose-sm mt-6 max-w-none rounded-lg border bg-background p-4">
               <h3 className="text-foreground">Answer:</h3>
-              <p className="text-muted-foreground">{answer}</p>
+              <p className="text-muted-foreground whitespace-pre-wrap">{answer}</p>
             </div>
           )}
         </CardContent>
