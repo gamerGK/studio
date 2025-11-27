@@ -14,6 +14,7 @@ export function PageHeader() {
             width={80}
             height={80}
             data-ai-hint={logo.imageHint}
+            className="h-auto w-auto"
           />
         )}
         <div>
