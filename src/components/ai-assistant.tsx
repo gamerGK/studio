@@ -116,9 +116,9 @@ export function AiAssistant() {
           )}
 
           {answer && (
-            <div className="prose prose-sm mt-6 max-w-none rounded-lg border bg-background p-4">
+            <div className="mt-6 rounded-lg border bg-background p-4">
               <h3 className="text-foreground">Answer:</h3>
-              <FormattedAnswer jsonString={answer} />
+              <FormattedAnswer content={answer} />
             </div>
           )}
         </CardContent>
