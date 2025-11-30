@@ -20,7 +20,6 @@ export type ResourceCategory = {
 
 export const navigationLinks = [
   { href: '#syllabus', label: 'Syllabus' },
-  { href: '#pdfs', label: 'PDFs' },
   { href: '#cheatsheet', label: 'Formula Sheet' },
   { href: '#handwritten', label: 'My Notes' },
   { href: '#videos', label: 'Lectures' },
