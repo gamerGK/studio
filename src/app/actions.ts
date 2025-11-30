@@ -9,6 +9,7 @@ import { z } from 'zod';
 
 const formSchema = z.object({
   question: z.string().min(1),
+  photoDataUri: z.string().optional(),
 });
 
 export async function handleQuestion(
