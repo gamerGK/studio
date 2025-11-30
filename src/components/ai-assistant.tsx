@@ -62,7 +62,7 @@ export function AiAssistant() {
           <div className="flex items-center gap-3">
             <Sparkles className="h-8 w-8 text-accent" />
             <CardTitle className="font-headline text-2xl text-primary">
-              AI Mining Expert
+              Mining chat bot for GATE Aspirants
             </CardTitle>
           </div>
         </CardHeader>
