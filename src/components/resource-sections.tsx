@@ -36,7 +36,6 @@ import {
   weightageData,
   cheatsheetData,
   handwrittenNotesData,
-  videosData,
   pyqsData,
   type ResourceCategory,
   type LinkItem,
@@ -178,7 +177,7 @@ export function ResourceSections() {
   }, [query]);
 
   const allResources = useMemo(() => {
-    const data = [cheatsheetData, handwrittenNotesData, videosData, pyqsData];
+    const data = [cheatsheetData, handwrittenNotesData, pyqsData];
     if (!query) return data;
     return data
       .map((cat) => ({

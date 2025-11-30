@@ -1,3 +1,4 @@
+
 export type LinkItem = {
   title: string;
   href: string;
@@ -22,7 +23,6 @@ export const navigationLinks = [
   { href: '#syllabus', label: 'Syllabus' },
   { href: '#cheatsheet', label: 'Formula Sheet' },
   { href: '#handwritten', label: 'My Notes' },
-  { href: '#videos', label: 'Lectures' },
   { href: '#pyq', label: 'PYQs' },
 ];
 
@@ -85,22 +85,6 @@ export const weightageData = {
   ],
 };
 
-export const pdfsData: ResourceCategory = {
-  id: 'pdfs',
-  title: 'Topic-wise PDFs',
-  icon: '📄',
-  subCategories: [
-    {
-      title: 'Blasting Methods',
-      links: [{ title: 'Blasting Methods PDF', href: 'pdfs/blasting_methods.pdf' }],
-    },
-    {
-      title: 'Types of Drill Bits',
-      links: [{ title: 'Types of Drill Bits PDF', href: 'pdfs/types_of_drill_bits.pdf' }],
-    },
-  ],
-};
-
 export const cheatsheetData: ResourceCategory = {
   id: 'cheatsheet',
   title: 'Formula Cheat Sheet',
@@ -152,22 +136,6 @@ export const handwrittenNotesData: ResourceCategory = {
         { title: 'Newton-Raphson Method', href: 'https://drive.google.com/file/d/1aYjO7oRF1t3Wsj6fsDJZj68mv5yF7J8D/view?usp=drive_link' },
         { title: 'Simpson’s 1/3 Rule & Trapezoidal Rule', href: 'https://drive.google.com/file/d/1dFU1O-K6TRTw0jQ8rzjFFn6JiSZJD7mf/view?usp=drive_link' },
       ],
-    },
-  ],
-};
-
-export const videosData: ResourceCategory = {
-  id: 'videos',
-  title: 'Video Lectures',
-  icon: '🎥',
-  subCategories: [
-    {
-      title: 'Surface Mining',
-      links: [{ title: 'Surface Mining - Intro Video', href: 'https://www.youtube.com/watch?v=xyz123' }],
-    },
-    {
-      title: 'Rock Mechanics',
-      links: [{ title: 'Rock Mechanics - Stress-Strain Video', href: 'https://www.youtube.com/watch?v=abc456' }],
     },
   ],
 };
