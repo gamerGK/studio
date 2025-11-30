@@ -22,7 +22,6 @@ export type ResourceCategory = {
 export const navigationLinks = [
   { href: '#syllabus', label: 'Syllabus' },
   { href: '#cheatsheet', label: 'Formula Sheet' },
-  { href: '#handwritten', label: 'My Notes' },
   { href: '#pyq', label: 'PYQs' },
 ];
 
@@ -97,46 +96,6 @@ export const cheatsheetData: ResourceCategory = {
         { title: 'My Formula sheet (PDF)', href: 'https://drive.google.com/file/d/125XT41yFrySsT1jpH63NmO_u7l9jkwWw/view?usp=drive_link' },
       ]
     }
-  ],
-};
-
-export const handwrittenNotesData: ResourceCategory = {
-  id: 'handwritten',
-  title: 'My Handwritten Notes',
-  icon: '✍️',
-  subCategories: [
-    {
-      title: 'Calculus',
-      icon: '📐',
-      links: [
-        { title: 'Double & Triple Integral - Working Rule', href: 'https://drive.google.com/file/d/1xqNl3WpgEriz7MUrcbp4Wgw3c34WEvo_/view?usp=sharing' },
-        { title: 'Integration', href: 'https://drive.google.com/file/d/1We7MztSpJIBTF6qaRQL9TH6mx4bFkfGp/view?usp=sharing' },
-        { title: 'Jacobian (Integration)', href: 'https://drive.google.com/file/d/1ayvuDK_g4D47U7bmPyZGCc7k2khfUSBL/view?usp=sharing' },
-        { title: 'Limits, Continuity & Differentiability', href: 'https://drive.google.com/file/d/1qc7MFbJ0oWxCbr8PdM-mGAqbG2ehgkd2/view?usp=drive_link' },
-        { title: 'Maxima & Minima', href: 'https://drive.google.com/file/d/1Vz2B9s4JsEkkSS0KeWQNwK3uYLy1uyzh/view?usp=drive_link' },
-        { title: 'Mean Value Theorem', href: 'https://drive.google.com/file/d/1L4kFFWycNXkERRmasH7LTuILOvbRaYWo/view?usp=drive_link' },
-        { title: 'Odd/Even Functions + Taylor & Maclaurin', href: 'https://drive.google.com/file/d/1DpdyxiinAaEGe3HuKYJ2BqqgXxiIvErC/view?usp=drive_link' },
-        { title: 'Partial Derivatives', href: 'https://drive.google.com/file/d/14W721hKQHmPUNiOsdJhjEwI8k9gOn6dM/view?usp=drive_link' },
-      ],
-      subCategories: [
-        {
-          title: 'Matrix One-Shot',
-          icon: '📊',
-          links: [{ title: 'Matrices One-Shot (Drive Link)', href: 'https://drive.google.com/file/d/1IiQnWE6lfzru_JmOvpufI6_yYafHSrMh/view?usp=sharing' }],
-        },
-      ],
-    },
-    {
-      title: 'Numerical Methods',
-      icon: '🧮',
-      links: [
-        { title: 'Beta & Gamma Functions', href: 'https://drive.google.com/file/d/1M28U3elKWIf5BLc0MWnaowVpkGp_L830/view?usp=drive_link' },
-        { title: 'Calculus Syllabus', href: 'https://drive.google.com/file/d/1E6EXvmOQ_Sn7h5qhXYga14EYZaX4Ww_c/view?usp=drive_link' },
-        { title: 'Euler\'s Method', href: 'https://drive.google.com/file/d/1jwvM73WOfk8uOqsACLloLnw2jj50EbYg/view?usp=drive_link' },
-        { title: 'Newton-Raphson Method', href: 'https://drive.google.com/file/d/1aYjO7oRF1t3Wsj6fsDJZj68mv5yF7J8D/view?usp=drive_link' },
-        { title: 'Simpson’s 1/3 Rule & Trapezoidal Rule', href: 'https://drive.google.com/file/d/1dFU1O-K6TRTw0jQ8rzjFFn6JiSZJD7mf/view?usp=drive_link' },
-      ],
-    },
   ],
 };
 
