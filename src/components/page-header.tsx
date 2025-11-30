@@ -19,7 +19,7 @@ export function PageHeader() {
         )}
         <div>
           <h1 className="font-headline text-3xl font-bold text-primary">
-            GATE Notes Portal - Mining Engineering
+            Mining chat bot for GATE Aspirants
           </h1>
           <p className="mt-1 text-muted-foreground">
             Chapter-wise Notes | Topic-wise PDFs | Video Lectures | Solved PYQs
