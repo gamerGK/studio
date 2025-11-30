@@ -34,7 +34,6 @@ import {
 import {
   syllabusData,
   weightageData,
-  notesData,
   pdfsData,
   cheatsheetData,
   handwrittenNotesData,
@@ -180,7 +179,7 @@ export function ResourceSections() {
   }, [query]);
 
   const allResources = useMemo(() => {
-    const data = [notesData, pdfsData, cheatsheetData, handwrittenNotesData, videosData, pyqsData];
+    const data = [pdfsData, cheatsheetData, handwrittenNotesData, videosData, pyqsData];
     if (!query) return data;
     return data
       .map((cat) => ({

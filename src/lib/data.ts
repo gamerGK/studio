@@ -20,7 +20,6 @@ export type ResourceCategory = {
 
 export const navigationLinks = [
   { href: '#syllabus', label: 'Syllabus' },
-  { href: '#notes', label: 'Notes' },
   { href: '#pdfs', label: 'PDFs' },
   { href: '#cheatsheet', label: 'Formula Sheet' },
   { href: '#handwritten', label: 'My Notes' },
@@ -84,22 +83,6 @@ export const weightageData = {
     { section: '• Mining Methods and Machinery', weightage: '20–25%', isSub: true },
     { section: '• Surface Environment, Ventilation, Underground Hazards', weightage: '15–20%', isSub: true },
     { section: '• Mineral Economics, Mine Planning, Systems Engineering', weightage: '10–15%', isSub: true },
-  ],
-};
-
-export const notesData: ResourceCategory = {
-  id: 'notes',
-  title: 'Chapter-wise Notes',
-  icon: '📘',
-  subCategories: [
-    {
-      title: 'Surface Mining',
-      links: [{ title: 'Surface Mining - Full Chapter Notes', href: 'notes/surface_mining_notes.pdf' }],
-    },
-    {
-      title: 'Rock Mechanics',
-      links: [{ title: 'Rock Mechanics - Full Chapter Notes', href: 'notes/rock_mechanics_notes.pdf' }],
-    },
   ],
 };
 
